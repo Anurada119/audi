@@ -10,7 +10,16 @@
 }
 
 body{
+    background: $lightGray;
+}
 
+.section-header{
+    font-size: 32px;
+    font-weight: $bold;
+    color: $fontColor;
+    text-transform: uppercase;
+    padding: 48px 0;
+    text-align: center;
 }
 
 .ab-wrapper{
@@ -19,6 +28,7 @@ body{
     background: $white;
     display: block;
     height: auto;
+    margin: 0 auto;
 }
 
 .ab-header{
@@ -70,10 +80,19 @@ body{
                         font-weight: $regular;
                         padding: 0 24px;
                         line-height: 45px;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: $red;
+                        }
                     }
                     &.special-link{
                         background: $red;
                         font-weight: $semi-bold;
+                        &:hover{
+                            a{
+                                color: $white;
+                            }
+                        }
                     }
                 }
             }
@@ -84,12 +103,21 @@ body{
             height: 65px;
             ul{
                 width: 100%;
-                justify-content: space-evenly;
                 align-items: center;
                 li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20%;
+                    height: 65px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background: darken($color: $lightGray, $amount: 5%);
+                        cursor: pointer;
+                    }
                     a{
                         font-size: 15px;
-                        font-weight: $semi-bold;
+                        font-weight: $bold;
                         color: $fontColor;
                     }
                 }
@@ -115,25 +143,85 @@ body{
 .ab-home-slider-wrpper{
     width: 100%;
     height: calc(100vh - 110px);
+    //max-height: 1080px;
     background: $black;
     display: flex;
+    min-width: 0;
+    min-height: 0;
     .ab-slider{
         height: 100%;
         background: $red;
-        .slide-bg{
+        min-width: 0;
+        min-height: 0;
+        
+        .slide-1{
+            .slider-bg{
+                background: url(../images/honda.jpg);
+            }
+        }
+        .slide-2{
+            .slider-bg{
+                background: url(../images/am.jpg);
+            }
+        }
+        .slide-3{
+            .slider-bg{
+                background: url(../images/mustang.jpg);
+            }
+        }
+        .slide-4{
+            .slider-bg{
+                background: url(../images/discovery.jpg);
+            }
+        }
 
+        .slide-1,
+        .slide-2,
+        .slide-3,
+        .slide-4{
+            .slider-bg{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 20%;
+            }
+        }
+
+        .slider-bg{
+            display: flex;
+            width: 100%;
+            height: calc(100vh - 110px);
+            //ght: 1080px;
+            align-items: center;
+        }
+        .slider-content{
+            width: 25%;
+            min-width: 320px;
+            margin-left: 10%;
         }
         .slide-header{
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.8);
+            width: fit-content;
+            padding: 24px;
+            margin-bottom: 12px;
             h1{
                 color: $white;
-                font-size: 56px;
+                font-size: 48px;
+                line-height: 48px;
+                display: inline-block;
+                width: fit-content;
             }
         }
         .slider-info{
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 24px;
+            width: 100%;
             p{
                 color: $white;
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: $regular;
+                margin-bottom: 24px;
             }
             .ab-btn{
                 background: $white;
@@ -142,6 +230,7 @@ body{
                 display: block;
                 text-transform: uppercase;
                 font-weight: $semi-bold;
+                border: none;
                 &.slider-btn{
                     font-size: 16px;
                 }
@@ -149,3 +238,139 @@ body{
         }
     }
 }
+
+.slick-dots {
+    text-align: left;
+    padding: 0px 8%;
+}
+
+.slick-dots li{
+    width: auto;
+    height: auto;
+}
+
+.slick-dots li button{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: $semi-bold;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 24px 24px;
+    cursor: pointer;
+    color: $white;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before{
+    display: none;
+}
+
+.slick-dots li.slick-active button{
+    font-size: 48px;
+}
+
+.ab-new-arivals{
+    width: 100%;
+}
+
+.ab-details{
+    width: 100%;
+    background: $darkGray;
+    padding: 80px 0 40px;
+}
+
+.ab-product-grid{
+    width: 90%;
+    max-width: 1630px;
+    margin: 0 auto;
+    background: $white;
+    &.details-grid{
+        background: $darkGray;
+    }
+    .ab-product-grid-inner{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .product{
+            max-width: calc((100%-180px)/3);
+            padding: 0 30px;
+            margin-bottom: 80px;
+        }
+        .detail-col{
+            max-width: calc((100%-240px)/4);
+            padding: 0 30px;
+            margin-bottom: 40px;
+        }
+        .product-inner{
+            width: 100%;
+            display: block;
+        }
+        .product-image{
+            img{
+                width: 100%;
+            }
+            margin-bottom: 32px;
+        }
+        .product-details{
+            .product-name{
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: $bold;
+                color: $fontColor;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+                &.detail-name{
+                    color: $white;
+                }
+            }
+            .product-desc{
+                font-size: 14px;
+                line-height: 2;
+                color: $fontColor;
+                font-weight: $regular;
+                margin-bottom: 32px;
+                letter-spacing: 1px;
+                &.detail-desc{
+                    color: $white;
+                }
+            }
+
+            .product-more-link{
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: $semi-bold;
+                color: $fontColor;
+                text-transform: uppercase;
+                position: relative;
+                padding-left: 20px;
+                transition: all 0.3s ease-in-out;
+                &.detail-more-link{
+                    color: $white;
+                }
+                &:hover{
+                    color: $red;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 14px;
+                    height: 11px;
+                    background: url(../images/find-out-arrow.png);
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    top: 5px;
+                    left: 0px;
+                }
+
+            }
+        }
+    }
+}
+

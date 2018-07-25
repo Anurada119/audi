@@ -1,14 +1,10 @@
 $(document).ready(function () {
-
-});
-
-$(document).ready(function () {
     $('.ab-slider').slick({
         autoplay: true,
-        arrows: true,
+        arrows: false,
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         fade: true,
         cssEase: 'linear'
     });
