@@ -1,10 +1,15 @@
-console.log('wtf');
+$(document).ready(function () {
 
-$(document).ready(function(){
-    $('.regiter-please').on('click', function(e){
-        e.preventDefault();
-        $(this).hide();
-        $('.login-screen').toggleClass('active');
-        $('.register-screen').toggleClass('active');
+});
+
+$(document).ready(function () {
+    $('.ab-slider').slick({
+        autoplay: true,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 });
