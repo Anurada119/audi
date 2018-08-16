@@ -12,6 +12,17 @@ $(document).ready(function () {
         fade: false,
         cssEase: 'linear'
     });
+
+    $('.brands-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: true,
+        dots: false,
+        cssEase: 'linear'
+      });
 });
 
 var searchBox = function(){

@@ -35,6 +35,10 @@ body{
     &.slider-btn{
         font-size: 16px;
     }
+    &.sub-btn{
+        background: $darkGray;
+        color: $white;
+    }
 }
 
 .ab-wrapper{
@@ -337,11 +341,121 @@ body{
     background: $darkGray;
 }
 
+.single-image-banner{
+    width: 100%;
+    min-height: calc(60vh - 110px);
+    .single-image-banner-inner{
+        min-height: calc(60vh - 110px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 10%;
+        &.audi-page{
+            background: url('../images/audi.jpg');
+            background-repeat: no-repeat;
+            background-position: right 50%;
+            background-size: cover;
+        }
+    }
+    .brand-banner-content{
+        .brand-header{
+            display: flex;
+            margin-bottom: 8px;
+            .brand-logo{
+                width: auto;
+                height: 120px;
+                display: flex;
+                padding: 12px;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.8);
+                img{
+                    height: 100%;
+                }
+            }
+            .brand-name{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                .brand-name-inner{
+                    background: rgba(0, 0, 0, 0.8);
+                    padding: 0 12px;
+                    &.brand-page-header{
+                        background: none;
+                    }
+                    h1{
+                        color: $white;
+                        text-transform: uppercase;
+                        &.brand-page-header{
+                            display: inline-block;
+                            background: rgba(0, 0, 0, 0.8);
+                            max-width: 60%;
+                            padding: 0 12px;
+                            margin: 0 0 0 -12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .brand-banner-info{
+        background: rgba(0, 0, 0, 0.8);
+        color: $white;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: $regular;
+        max-width: calc(50vw - 10%);
+    }
+
+    .options-bar{
+        width: 100%;
+        height: 50px;
+        background: darken($lightGray, 2%);
+        border-bottom: 1px solid darken($lightGray, 6%);
+        ul{
+            display: flex;
+            li{
+                a{
+                    line-height: 50px;
+                    padding: 0 20px;
+                    border-right: 1px solid darken($lightGray, 7%);
+                    display: block;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $darkGray;
+                    font-weight: $semi-bold;
+                    &:hover{
+                        background: $red;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &.dark{
+            background: $darkGray;
+            border-bottom: 1px solid darken($darkGray, 2%);
+            ul{
+                li{
+                    a{
+                        color: $lightGray;
+                        border-right: 1px solid darken($lightGray, 70%);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .ab-product-grid{
     width: 90%;
     max-width: 1630px;
     margin: 0 auto;
     background: $white;
+    &.margin-top{
+        margin-top: 80px;
+    }
     &.details-grid{
         background: $darkGray;
     }
@@ -661,404 +775,80 @@ body{
     display: none;
 }
 
-
-@media only screen and (max-width: 1024px){
-    .ab-home-slider-wrpper{
-        .ab-slider{
-            .slider-content{
-                width: 40%;
-            }
-        }
-    }
-
-    .ab-details,
-    .ab-services{
+.brand-names-wrapper{
+    width: 100%;
+    .brand-names-inner{
         width: 100%;
-        padding: 80px 0 40px;
-    }
-    .floating-menu{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 999px){
-    .ab-header{
-        min-height: 65px;
-        max-height: 65px;
-        .ab-logo{
-            padding: 0 24px;
-            .ab-logo-inner{
-                width: 100px;
-                height: 60px;
-            }
-        }
-        .ab-navigation{
-            .basic-nav{
-                display: none;
-            }
-            .main-nav{
-                ul{
-                    li{
-                        a{
-                            font-size: 12px;
-                        }
-                    }
-                }
-                
-            }
-        }
-        .ab-search-wrapper{
-            display: none;
-        }
-        .mobile-menu{
-            display: block;
-            .mobile-menu-icon{
-                display: flex;
-                width: 65px;
-                height: 65px;
-                background: $black;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                &.open{
-                    .line{
-                        background: transparent;
-                        &:before{
-                            transform: rotate(45deg);
-                        }
-                        &:after{
-                            transform: rotate(-45deg);
-                        }
-                    }
-                    
-                }
-                .line{
-                    width: 24px;
-                    height: 2px;
-                    background: $lightGray;
-                    position: relative;
-                    transition: all 0.3s ease-in-out;
-                    &:before,
-                    &:after{
-                        content: '';
-                        position: absolute;
-                        width: 24px;
-                        height: 2px;
-                        background: $lightGray;
-                        display: block;
-                        transition: all 0.3s ease-in-out;
-                    }
-                    &:before{
-                        transform: translate(0, -8px);
-                    }
-                    &:after{
-                        transform: translate(0, 8px);
-                    }
-                }
-            }
-        }
-    }
-    .ab-side-nav{
-        position: absolute;
-        display: block;
-        z-index: 99;
-        width: 0;
-        overflow: hidden;
-        top: 65px;
-        right: 0;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        transform: translate(100%);
-        opacity: 0;
-        &.nav-open{
+        .brand{
+            padding: 56px 0 56px 5%;
             width: 100%;
-            transform: translate(0);
-            opacity: 1;
-        }
-        .side-nav-inner{
-            position: absolute;
-            right: 0;
-            width: 300px;
-            background: $lightGray;
-            height: 100%;
-            .mobile-search{
-                display: flex;
-                width: 100%;
-                .searchbar{
-                    width: calc(100% - 50px);
-                    input{
-                        width: 100%;
-                        height: 50px;
-                        border: 1px solid $secBg;
-                        padding: 0 16px;
-                    }
-                    
-                }
-                .search-btn{
-                    width: 50px;
-                    height: 50px;
-                    background: $darkGray;
-                    display: flex;
-                    background: url(../images/search-icon.png) #eaeaea;
-                    background-size: 20px;
-                    background-position: 50% 50%;
-                    background-repeat: no-repeat;
-                }
-
+            max-width: 1630px;
+            display: flex;
+            &:nth-child(even){
+                background: darken($color: #FAFAFA, $amount: 1%);
             }
-
-            .mobile-basic-nav{
-                .main-nav{
-                    display: none;
-                    width: 100%;
-                    ul{
-                        li{
-                            width: 100%;
-                            height: 50px;
-                            border-bottom: 1px solid darken($color: $lightGray, $amount: 10%);
-                            background: $secBg;
-                            a{
-                                line-height: 50px;
-                                padding: 0 12px;
-                                text-transform: uppercase;
-                                font-weight: $bold;
-                                font-size: 14px;
-                                color: $black;
-                            }
-                        }
-                    }
-                }
-                .basic-nav{
-                    width: 100%;
-                    ul{
-                        li{
-                            width: 100%;
-                            height: 40px;
-                            border-bottom: 1px solid darken($color: $lightGray, $amount: 5%); 
-                            a{
-                                font-size: 13px;
-                                text-transform: uppercase;
-                                color: $fontColor;
-                                font-weight: $semi-bold;
-                                line-height: 40px;
-                                padding: 0 12px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .ab-home-slider-wrpper{
-        height: calc(100vh - 65px);
-        .ab-slider{
-
-            .slider-bg{
-                height: calc(100vh - 65px);
-            }
-            .slider-content{
-                width: 50%;
-            }
-            .slide-header{
+            .brand-info{
+                width: 35%;
                 h1{
+                    text-transform: uppercase;
                     font-size: 32px;
-                    line-height: 32px;
                 }
-            }
-            .slider-info{
-                p{
-                    color: $white;
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-    .ab-product-grid{
-        width: 100%;
-        .ab-product-grid-inner{
-            .product{
-                max-width: calc((100%-180px)/2);
-            }
-            .detail-col{
-                max-width: calc((100%-240px)/2);
-                margin-bottom: 80px;
-            }
-        }
-    }
-    .ab-subscribe{
-        .ab-subs-form{
-            width: 90%;
-        }
-    }
-}
-
-@media only screen and (max-width: 767px){
-    .ab-header{
-        min-height: 65px;
-        max-height: 65px;
-        .ab-logo{
-            padding: 0 16px;
-            .ab-logo-inner{
-                width: 100px;
-                height: 65px;
-            }
-        }
-        .ab-navigation{
-            .main-nav{
-                display: block;
-                ul{
-                    display: none;
-                }
-                
-            }
-        }
-        .mobile-menu{
-            display: block;
-            .mobile-menu-icon{
-                width: 100%;
-                justify-content: flex-end;
-                padding: 0 16px;
-            }
-        }
-    }
-
-    .section-header{
-        font-size: 24px;
-        padding: 40px 0;
-    }
-
-    .ab-btn{
-        padding: 12px 20px;
-        &.slider-btn{
-            font-size: 14px;
-        }
-    }
-
-    .ab-home-slider-wrpper{
-        height: calc(100vh - 65px);
-        .ab-slider{
-    
-            .slider-bg{
-                height: calc(100vh - 65px);
-                align-items: flex-end;
-                padding-bottom: 140px;
-            }
-            .slider-content{
-                width: 90%;
-                min-width: 300px;
-                margin: 0 10px;
-            }
-            .slide-header{
-                padding: 16px;
-                margin-bottom: 0px;
-                background: rgba(0, 0, 0, 0.4);
-                h1{
-                    font-size: 24px;
-                    line-height: 24px;
-                }
-            }
-            .slider-info{
-                padding: 0 16px 16px 16px;
-                background: rgba(0, 0, 0, 0.4);
                 p{
                     font-size: 14px;
+                    line-height: 2;
+                    color: $fontColor;
+                    margin-bottom: 24px;
                 }
             }
-        }
-    }
 
-    .ab-product-grid{
-        width: 100%;
-        .ab-product-grid-inner{
-            .product{
-                max-width: 100%;
-                padding: 0 20px;
-            }
-            .detail-col{
-                max-width: 100%;
-                padding: 0 20px;
-                margin-bottom: 80px;
-                &:last-child{
-                    margin-bottom: 20px;
+            .brand-images{
+                width: 70%;
+                padding: 0 0 0 24px;
+                .slick-next,
+                .slick-prev{
+                    width: 40px;
+                    height: 40px;
+                    z-index: 9;
+                    background: transparent;
+                    &:before,
+                    &::after{
+                        width: 30px;
+                        height: 30px;
+                        display: block;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        border-left: 2px solid $white;
+                        border-bottom: 2px solid $white;
+                        content: '';
+                        background: transparent;
+                        transform: rotate(50deg)
+;                    }
+
                 }
-            }
-        }
-    }
-
-    .ab-special-section{
-    
-        .ab-special-section-inner{
-            align-items: flex-end;
-            width: 100%;
-            padding-bottom: 10px;
-        }
-        .ab-special-section-info{
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            min-width: 300px;
-            margin: 0 10px;
-            h1{
-                font-size: 24px;
-                line-height: 24px;
-                sup{
-                    font-size: 12px;
+                .slick-prev{
+                    left: 25px;
                 }
-            }
-            p{
-                font-size: 14px;
-            }
-        }
-    }
-    
-    .ab-subscribe{
-        padding-bottom: 60px;
-        .ab-subs-form{
-            width: 100%;
-            max-width: 300px;
-            display: flex;
-            input{
-                width: 100%;
-                margin-right: 8px;
-                padding: 0 12px;
-            }
-            .sub-btn{
-                background: $darkGray;
-                color: $white;
-            }
-        }
-    }
-    .service-desc{
-        margin-bottom: 0 !important;
-    }
-
-    .ab-footer{
-        .footer-col{
-            h3{
-                text-align: center;
-                a{
-                    text-align: center;
+                .slick-next{
+                    right: 25px;
+                    &:before,
+                    &::after{
+                        border-right: 2px solid $white;
+                        border-top: 2px solid $white;
+                        border-left: none;
+                        border-bottom: none;
+;                    }
                 }
-            }
-            ul{
-                li{
-                    a{
-                        width: 100%;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-
-    .ab-side-nav{
-        .side-nav-inner{
-
-            .mobile-basic-nav{
-                .main-nav{
-                    display: block;
+                img{
+                    height: 280px;
+                    margin: 0;
+                    padding: 0;
+                    outline: none;
                 }
             }
         }
     }
 }
+
+
+@import 'media';
