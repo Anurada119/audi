@@ -11,7 +11,7 @@
 }
 
 body{
-    background: $lightGray;
+    background: darken($color: #efefef, $amount: 10%);
 }
 
 .section-header{
