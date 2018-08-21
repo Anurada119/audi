@@ -412,11 +412,25 @@
         .single-image-banner-inner{
             min-height: calc(80vh - 110px);
             padding: 0 20px;
+            &.centered{
+                .brand-header{
+                    justify-content: center;
+                    .brand-name{
+                        .brand-name-inner{
+                            p{
+                                max-width: 90vw;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .brand-banner-content{
             .brand-header{
                 flex-wrap: wrap;
                 width: 100%;
+                padding-top: 16px;
+                padding-bottom: 8px;
                 .brand-logo{
                     width: 120px;
                     img{
