@@ -1300,11 +1300,20 @@ body {
   padding: 80px 30px;
 }
 
+.options-bar.product-page {
+  background-color: #efefef;
+}
+
 .options-bar.product-page ul {
   width: 90%;
   max-width: 1630px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.options-bar.product-page ul li a {
+  background-color: #e3e3e3;
+  border-right: 1px solid #fff;
 }
 
 .options-bar.product-page ul li a img {
@@ -1318,6 +1327,87 @@ body {
 
 .options-bar.product-page ul li:first-child a {
   border-left: 1px solid #e9e9e9;
+}
+
+.ab-container {
+  width: 90%;
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.ab-spec-grid {
+  padding: 80px 0;
+}
+
+.ab-spec-grid-inner {
+  display: flex;
+}
+
+.ab-spec-grid-inner .gallery-wrapper {
+  flex-basis: 70%;
+}
+
+.ab-spec-grid-inner .spec-list {
+  flex-basis: 30%;
+  padding-left: 25px;
+}
+
+.ab-spec-grid-inner .spec-list .spec-list-title {
+  background-color: #e6e6e6;
+  padding: 15px;
+}
+
+.ab-spec-grid-inner .spec-list .spec-list-content {
+  background-color: #262626;
+  padding: 25px;
+  color: #ffffff;
+}
+
+.ab-spec-grid-inner .spec-list .spec-list-content .spec-item {
+  padding: 8px 0;
+  display: flex;
+}
+
+.ab-spec-grid-inner .spec-list .spec-list-content .spec-item .spec-item-label,
+        .ab-spec-grid-inner .spec-list .spec-list-content .spec-item .spec-item-desc {
+  flex-basis: 50%;
+}
+
+.ab-spec-grid-inner .spec-list .spec-list-content .spec-item .spec-item-desc {
+  text-align: right;
+}
+
+.ab-features {
+  background-color: #f8f8f8;
+}
+
+.ab-features .section-header.product-page {
+  padding-bottom: 30px;
+}
+
+.ab-features .feature-wrapper {
+  width: 90%;
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 30px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ab-features .feature-wrapper .feature-col {
+  flex-basis: 25%;
+}
+
+.ab-features .feature-wrapper .feature-col .feature-item {
+  padding: 12px;
+  background-color: #fff;
+  margin-bottom: 2px;
+}
+
+.ab-features .feature-wrapper .feature-col:nth-child(odd) .feature-item {
+  background-color: #efefef;
 }
 
 .ab-contact {
@@ -1408,34 +1498,6 @@ body {
 
 .ab-btn.sub-btn.product-page {
   background-color: #FF4B4B;
-}
-
-.ab-features {
-  background-color: #f8f8f8;
-}
-
-.ab-features .feature-wrapper {
-  width: 90%;
-  max-width: 1630px;
-  margin: 0 auto;
-  padding: 0 30px;
-  padding-bottom: 80px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ab-features .feature-wrapper .feature-col {
-  flex-basis: 25%;
-}
-
-.ab-features .feature-wrapper .feature-col .feature-item {
-  padding: 12px;
-  background-color: #fff;
-  margin-bottom: 2px;
-}
-
-.ab-features .feature-wrapper .feature-col:nth-child(odd) .feature-item {
-  background-color: #efefef;
 }
 
 .font-style-03 {

@@ -52,6 +52,7 @@
 //options bar
 .options-bar {
     &.product-page {
+        background-color: #efefef;
         ul {
             width: 90%;
             max-width: 1630px;
@@ -59,6 +60,8 @@
             padding: 0 30px;
             li {
                 a {
+                    background-color: #e3e3e3;
+                    border-right: 1px solid #fff;
                     img {
                         width: 14px;
                         height: 14px;
@@ -72,6 +75,82 @@
                     a {
                         border-left: 1px solid #e9e9e9;
                     }
+                }
+            }
+        }
+    }
+}
+
+//gallery-section
+.ab-container {
+    width: 90%;
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.ab-spec-grid {
+    padding: 80px 0;
+}
+
+.ab-spec-grid-inner {
+    display: flex;
+    .gallery-wrapper {
+        flex-basis: 70%;
+    }
+    .spec-list {
+        flex-basis: 30%;
+        padding-left: 25px;
+        .spec-list-title {
+            background-color: #e6e6e6;
+            padding: 15px;
+        }
+        .spec-list-content {
+            background-color: $darkGray;
+            padding: 25px;
+            color: $white;
+            .spec-item {
+                padding: 8px 0;
+                display: flex;
+                .spec-item-label,
+                .spec-item-desc {
+                    flex-basis: 50%;
+                }
+                .spec-item-label {}
+                .spec-item-desc {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+//feature section
+.ab-features {
+    background-color: #f8f8f8;
+    .section-header {
+        &.product-page {
+            padding-bottom: 30px;
+        }
+    }
+    .feature-wrapper {
+        width: 90%;
+        max-width: 1630px;
+        margin: 0 auto;
+        padding: 0 30px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        .feature-col {
+            flex-basis: 25%;
+            .feature-item {
+                padding: 12px;
+                background-color: #fff;
+                margin-bottom: 2px;
+            }
+            &:nth-child(odd) {
+                .feature-item {
+                    background-color: #efefef;
                 }
             }
         }
@@ -157,33 +236,6 @@
     &.sub-btn {
         &.product-page {
             background-color: $red;
-        }
-    }
-}
-
-//feature section
-.ab-features {
-    background-color: #f8f8f8;
-    .feature-wrapper {
-        width: 90%;
-        max-width: 1630px;
-        margin: 0 auto;
-        padding: 0 30px;
-        padding-bottom: 80px;
-        display: flex;
-        flex-wrap: wrap;
-        .feature-col {
-            flex-basis: 25%;
-            .feature-item {
-                padding: 12px;
-                background-color: #fff;
-                margin-bottom: 2px;
-            }
-            &:nth-child(odd) {
-                .feature-item {
-                    background-color: #efefef;
-                }
-            }
         }
     }
 }
