@@ -1160,16 +1160,42 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-bottom: 20px;
+  padding: 12px 0 0;
 }
 
 .trade-in-wrapper .section-1 .group .question .q-image {
   width: 40px;
   height: 40px;
   display: block;
+  margin-bottom: 4px;
+}
+
+.trade-in-wrapper .section-1 .group .question .q-image.exterior {
   background: url(../images/exterior-condition.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
+}
+
+.trade-in-wrapper .section-1 .group .question .q-image.interior {
+  background: url(../images/interior-condition.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.trade-in-wrapper .section-1 .group .question .q-image.accident {
+  background: url(../images/cone-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.trade-in-wrapper .section-1 .group .answers .checkbox-wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .ab-input,
@@ -1208,6 +1234,13 @@ body {
 .checkbox {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  width: 100%;
+  padding: 12px 8px 12px 0;
+}
+
+.checkbox.three-col {
+  width: 33.33%;
 }
 
 .checkbox input[type=checkbox] {
@@ -1221,7 +1254,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: #e2e2e2;
   border: 1px solid #262626;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -1233,7 +1266,7 @@ body {
   content: '';
   width: 12px;
   height: 12px;
-  background: #ffffff;
+  background: #e2e2e2;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
