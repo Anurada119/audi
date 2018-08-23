@@ -21,6 +21,11 @@ body {
   text-align: center;
 }
 
+.section-header.about-us {
+  text-align: left;
+  padding: 40px 30px 0;
+}
+
 .ab-para {
   font-size: 14px;
   line-height: 1.5;
@@ -1012,6 +1017,11 @@ body {
   padding-bottom: 80px;
 }
 
+.trade-in-wrapper.about-us {
+  max-width: 1230px;
+  padding: 40px 0;
+}
+
 .trade-in-wrapper .section-1 {
   display: block;
   width: 100%;
@@ -1202,6 +1212,87 @@ body {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+}
+
+.about-us .section-1 {
+  display: flex;
+  padding: 40px 0;
+}
+
+.about-us .section-1 .section-header {
+  padding: 0 0 30px 0;
+  line-height: 1;
+}
+
+.about-us .section-1 .section-header span {
+  color: rgba(38, 38, 38, 0.35);
+}
+
+.about-us .section-1 .ab-para {
+  margin-bottom: 0;
+}
+
+.about-us .section-1 .about-col-1,
+  .about-us .section-1 .about-col-2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 50%;
+  padding: 0 30px;
+}
+
+.about-us .section-1 .about-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.about-us .section-1 .about-image.image-1 {
+  background: url(../images/about_us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.about-us .section-1 .about-image.image-2 {
+  background: url(../images/our_values.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.our-team {
+  display: flex;
+  padding: 60px 0 40px 0;
+}
+
+.our-team .team-member {
+  padding: 0 30px;
+  display: flex;
+}
+
+.our-team .team-member .team-member-pic {
+  width: 100%;
+}
+
+.our-team .team-member .team-member-pic img {
+  width: 100%;
+}
+
+.our-team .team-member .member-info .member-name {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 22px;
+  margin-bottom: 8px;
+  color: #363636;
+}
+
+.our-team .team-member .member-info .member-post {
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 14px;
+  display: flex;
 }
 
 .ab-input,
@@ -1666,6 +1757,24 @@ body {
   .trade-in-wrapper {
     padding: 0 16px 40px 16px;
   }
+
+  .our-team {
+    flex-wrap: wrap;
+  }
+
+  .our-team .team-member {
+    width: calc(100% / 6);
+  }
+
+  .our-team .team-member .member-info .member-name {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .our-team .team-member .member-info .member-post {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -1883,6 +1992,24 @@ body {
 
   .ab-subscribe .ab-subs-form {
     width: 90%;
+  }
+
+  .our-team {
+    flex-wrap: wrap;
+  }
+
+  .our-team .team-member {
+    width: 33.33%;
+  }
+
+  .our-team .team-member .member-info .member-name {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .our-team .team-member .member-info .member-post {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
@@ -2263,5 +2390,43 @@ body {
   .ab-input.two-col:nth-child(even),
       .ab-textarea.two-col:nth-child(even) {
     margin-left: 0px;
+  }
+
+  .our-team .team-member {
+    width: 50%;
+    padding: 0 16px;
+  }
+
+  .our-team .team-member .member-info .member-name {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .our-team .team-member .member-info .member-post {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .about-us .section-1 {
+    flex-wrap: wrap;
+  }
+
+  .about-us .section-1 .section-header {
+    padding: 0 0 30px 0;
+    line-height: 1;
+  }
+
+  .about-us .section-1 .section-header span {
+    color: rgba(38, 38, 38, 0.35);
+  }
+
+  .about-us .section-1 .ab-para {
+    margin-bottom: 16px;
+  }
+
+  .about-us .section-1 .about-col-1,
+    .about-us .section-1 .about-col-2 {
+    width: 100%;
+    padding: 0 16px;
   }
 }

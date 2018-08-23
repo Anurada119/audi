@@ -20,9 +20,13 @@ body {
     text-transform: uppercase;
     padding: 60px 0;
     text-align: center;
+    &.about-us {
+        text-align: left;
+        padding: 40px 30px 0;
+    }
 }
 
-.ab-para{
+.ab-para {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 24px;
@@ -933,6 +937,10 @@ body {
     max-width: 860px;
     margin: 0 auto;
     padding-bottom: 80px;
+    &.about-us {
+        max-width: 1230px;
+        padding: 40px 0;
+    }
     .section-1 {
         display: block;
         width: 100%;
@@ -1100,6 +1108,79 @@ body {
                     width: 100%;
                     flex-wrap: wrap;
                 }
+            }
+        }
+    }
+}
+
+.about-us {
+    .section-1 {
+        display: flex;
+        padding: 40px 0;
+        .section-header {
+            padding: 0 0 30px 0;
+            line-height: 1;
+            span {
+                color: rgba($color: $darkGray, $alpha: .35)
+            }
+        }
+        .ab-para {
+            margin-bottom: 0;
+        }
+        .about-col-1,
+        .about-col-2 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            width: 50%;
+            padding: 0 30px;
+        }
+        .about-image {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            &.image-1 {
+                background: url(../images/about_us.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
+            }
+            &.image-2 {
+                background: url(../images/our_values.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
+            }
+        }
+    }
+}
+
+.our-team {
+    display: flex;
+    padding: 60px 0 40px 0;
+    .team-member {
+        padding: 0 30px;
+        display: flex;
+        .team-member-pic {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .member-info {
+            .member-name {
+                font-size: 20px;
+                text-transform: uppercase;
+                line-height: 22px;
+                margin-bottom: 8px;
+                color: $fontColor;
+            }
+            .member-post {
+                font-size: 12px;
+                text-transform: uppercase;
+                line-height: 14px;
+                display: flex;
             }
         }
     }
