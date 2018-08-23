@@ -18,8 +18,14 @@ body {
     font-weight: $bold;
     color: $fontColor;
     text-transform: uppercase;
-    padding: 80px 0;
+    padding: 60px 0;
     text-align: center;
+}
+
+.ab-para{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
 }
 
 .ab-btn {
