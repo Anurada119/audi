@@ -537,6 +537,9 @@
     }
     .trade-in-wrapper {
         padding-bottom: 40px;
+        &.contact-us-wrap{
+            padding: 0 0px 40px;
+        }
         .section-1 {
             .section-number {
                 height: 50px;
@@ -657,5 +660,15 @@
                 padding: 0 16px;
             }
         }
+    }
+
+    .ab-services {
+        width: 100%;
+        padding: 40px 0 40px;
+    }
+
+    .map-ab-location {
+        width: 100%;
+        margin: 40px 0 0px 0;
     }
 }
