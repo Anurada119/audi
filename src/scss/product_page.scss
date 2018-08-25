@@ -1,5 +1,14 @@
 //header-section
 .single-image-banner {
+  .image-banner-resp-container{
+    width: 90%;
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
   .single-image-banner-inner {
     &.product-page {
       background: url(../images/Red-Audi-Q2-Desktop-Background.png);
@@ -7,6 +16,7 @@
       background-position: right 50%;
       background-size: cover;
       align-items: flex-end;
+      padding: 0;
       .banner-bg {
         .brand-header {
           margin-bottom: 0;
@@ -229,6 +239,7 @@
       width: 100%;
       height: 100%;
       resize: none;
+      padding: 16px;
     }
   }
 }
@@ -269,7 +280,7 @@
   .ab-contact {
     .contact-form-wrapper {
       flex-direction: column;
-      width: 100%;
+      width: 90%;
       .information-section {
         padding-right: 0;
       }
@@ -278,9 +289,14 @@
       }
     }
   }
+  .single-image-banner {
+    .image-banner-resp-container{
+      width: 90%;
+    }
+  }
   .ab-features {
     .feature-wrapper {
-      width: 100%;
+      width: 90%;
       .feature-col {
         flex-basis: 50%;
       }
@@ -299,15 +315,62 @@
 }
 
 .ab-container {
-  width: 100%;
+  width: 90%;
 }
 
 .section-header{
   &.product-page{
-    width: 100%;
+    width: 90%;
   }
 }
 
+.ab-contact{
+  .contact-form-wrapper {
+    .information-section {
+      .contact-info-list{
+        padding-left: 0;
+      }
+    }
+  }
+} 
+}
+
+@media only screen and (max-width: 999px) {
+  .single-image-banner {
+    .image-banner-resp-container{
+      width: 100%;
+    }
+  }
+
+  .options-bar{
+    &.product-page {
+      ul{
+        width: 100%;
+      }
+    }
+  }
+
+  .ab-features {
+    .feature-wrapper {
+      width: 100%;
+    }
+  }
+
+  .ab-contact {
+    .contact-form-wrapper {
+      width: 100%;
+    }
+  }
+
+  .ab-container {
+    width: 100%;
+  }
+  
+  .section-header{
+    &.product-page{
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -340,6 +403,19 @@
  .section-header{
   &.product-page{
     padding: 40px 20px 0;
+  }
+}
+
+.single-image-banner{
+    .image-banner-resp-container{
+      padding: 0 20px;
+    }
+  .product-page{
+    .brand-banner-content {
+      .brand-header{
+        padding-bottom: 0;
+      }
+    }
   }
 }
 }
