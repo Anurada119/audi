@@ -109,17 +109,18 @@
     .main-image{
       margin-bottom: 15px;
       img{
+        height: 100%;
         width: 100%;
       }
     }
     .gallery-thumb-wrapper{
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       .gallery-thumb{
-        flex-basis: calc(100% / 7);
+        flex-basis: calc(100% / 100);
+    margin-right: 5px;
         img{
-          width: 100%;
+          width: 100px;
         }
       }
     }
@@ -129,14 +130,14 @@
     padding-left: 25px;
     .spec-list-title {
       background-color: #e6e6e6;
-      padding: 15px;
+      padding: 30px 15px;
     }
     .spec-list-content {
       background-color: $darkGray;
-      padding: 25px;
+      padding: 30px 25px;
       color: $white;
       .spec-item {
-        padding: 8px 0;
+        padding: 13px 0;
         display: flex;
         .spec-item-label,
         .spec-item-desc {
